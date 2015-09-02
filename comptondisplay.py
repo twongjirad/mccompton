@@ -14,7 +14,8 @@ class ComptonDisplay(QtGui.QWidget):
 
         self.vis = gl.GLViewWidget()
         self.layout.addWidget( self.vis, 0, 0 )
-        self.vis.opts['distance'] = 500.0
+        self.layout.setRowMinimumHeight( 0, 400 )
+        self.vis.opts['distance'] = 200.0
         #vis.show()
         #self.vis.setWindowTitle('compton scattering')
         # define grid
@@ -87,8 +88,8 @@ class ComptonDisplay(QtGui.QWidget):
     def drawEvent( self, data ):
         
         # draw hits in vial and NaI detector
-        self.gnai.setData( pos=data.NaIhit, color=(1,1,1,.3), size=0.1, pxMode=False )
-        self.gvial.setData( pos=data.vialhit, color=(1,1,1,.3), size=0.1, pxMode=False)
+        self.gnai.setData( pos=data.NaIhit, color=(1,1,1,.3), size=0.5, pxMode=False )
+        self.gvial.setData( pos=data.vialhit, color=(1,1,1,.3), size=0.2, pxMode=False)
         
         # draw source
         sourcedist = float(self.sourcedist.text())
