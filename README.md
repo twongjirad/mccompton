@@ -2,6 +2,8 @@
 
 Tool to study expected cherenkov pattern for nudot compton test stand.
 
+![alt tag](https://raw.github.com/twongjirad/mccompton/master/example.png)
+
 ### Dependencies
 
 * pyopengl: python OpenGL bindings
@@ -12,5 +14,6 @@ Tool to study expected cherenkov pattern for nudot compton test stand.
 
 ### To run
 
-* with visualization: rnu_mccompton.py
+* with visualization: run_mccompton.py
 * without visualization: (to do)
+
